@@ -20,9 +20,19 @@ public class RentalController {
         return rentalService.getRentalsByUserId(userId);
     }
 
-    @PostMapping
+    @PostMapping("/rental")
     public Rental createRental(@RequestBody Rental rental) {
         return rentalService.createRental(rental);
+    }
+
+    @PutMapping("/return")
+    public Rental returnRental(@RequestBody Rental rental) {
+        return rentalService.returnRental(rental);
+    }
+
+    @DeleteMapping("/rental/delete/{id}")
+    public void deleteRental(@PathVariable Long id) {
+        rentalService.deleteRental(id);
     }
 
 }

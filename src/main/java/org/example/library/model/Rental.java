@@ -23,5 +23,6 @@ public class Rental {
     private Book book;
 
     private LocalDateTime rentalDate;
+
     private LocalDateTime returnDate;
 }
